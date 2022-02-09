@@ -16,7 +16,7 @@ import { VideoConfig } from './configTypes';
 import ffmpegPath from 'ffmpeg-for-homebridge';
 import { Logger } from './logger';
 import { ChildProcess, ChildProcessWithoutNullStreams, spawn, StdioNull, StdioPipe } from 'child_process';
-import fs from 'fs';
+// import fs from 'fs';
 import { AddressInfo, Socket, Server, createServer } from 'net';
 import { once } from 'events';
 import { Readable } from 'stream';
@@ -124,7 +124,7 @@ export class RecordingDelegate implements CameraRecordingDelegate {
     this.videoProcessor = videoProcessor || ffmpegPath || 'ffmpeg';
 
     api.on(APIEvent.SHUTDOWN, () => {
-      if(this.preBufferSession) {
+      if (this.preBufferSession) {
         this.preBufferSession.process?.kill();
         this.preBufferSession.server?.close();
       }

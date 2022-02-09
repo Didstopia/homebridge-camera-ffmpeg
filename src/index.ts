@@ -10,7 +10,7 @@ import {
   PlatformAccessory,
   PlatformAccessoryEvent,
   PlatformConfig,
-  RTPStreamManagement
+  // RTPStreamManagement
 } from 'homebridge';
 import http from 'http';
 import mqtt from 'mqtt';
@@ -123,15 +123,19 @@ class FfmpegPlatform implements DynamicPlatformPlugin {
     if (motionSensor) {
       accessory.removeService(motionSensor);
     }
+
     if (doorbell) {
       accessory.removeService(doorbell);
     }
+
     if (doorbellTrigger) {
       accessory.removeService(doorbellTrigger);
     }
+
     if (motionTrigger) {
       accessory.removeService(motionTrigger);
     }
+
     if (doorbellSwitch) {
       accessory.removeService(doorbellSwitch);
     }
