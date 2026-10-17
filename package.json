@@ -69,7 +69,7 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "ffmpeg-for-homebridge": "^0.0.9",
+    "ffmpeg-for-homebridge": "^2.2.2",
     "mqtt": "4.2.8",
     "pick-port": "^1.0.0"
   }
